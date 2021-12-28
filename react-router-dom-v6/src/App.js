@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import "normalize.css";
 import "./globalStyle.css";
 
 function App() {
   return (
-    <div className="main-style">
+    <div>
       <header>
         <h1>React Router DOM V6</h1>
         <nav className="navs-style">
@@ -17,8 +17,8 @@ function App() {
             Expenses
           </Link>
         </nav>
+        <Outlet />
       </header>
-      <main></main>
     </div>
   );
 }
