@@ -1,26 +1,38 @@
 import { NavLink, Outlet, useSearchParams } from "react-router-dom";
 import "../globalStyle.css";
 import { getInvoices } from "../data";
+import { useState } from "react";
 
 export default function Invoices() {
   let invoices = getInvoices();
   let [searchParams, setSearchParams] = useSearchParams();
+  let [inputValue, setInputValue] = useState("");
+
+  function handleClick() {
+    if (inputValue) {
+      setSearchParams({ filter: inputValue });
+    } else {
+      setSearchParams({});
+    }
+  }
+
+  function handleChange(event) {
+    let value = event.target.value;
+    if (value) {
+      setInputValue(value);
+    } else {
+      setSearchParams({});
+    }
+  }
 
   return (
     <>
-      <header>
+      <section>
         <h2>Invoices</h2>
         <nav className="navs-style">
           <input
-            value={searchParams.get("filter") || ""}
-            onChange={(event) => {
-              let filter = event.target.value;
-              if (filter) {
-                setSearchParams({ filter });
-              } else {
-                setSearchParams({});
-              }
-            }}
+            value={inputValue || ""}
+            onChange={(event) => handleChange(event)}
           />
           {invoices
             .filter((invoice) => {
@@ -40,7 +52,8 @@ export default function Invoices() {
             ))}
         </nav>
         <Outlet />
-      </header>
+      </section>
+      <button onClick={() => handleClick()}>Search</button>
     </>
   );
 }

@@ -6,7 +6,7 @@ import "./globalStyle.css";
 function App() {
   return (
     <div>
-      <header>
+      <section>
         <h1>React Router DOM V6</h1>
         <nav className="navs-style">
           <Link className="links-style" to="/invoices">
@@ -18,7 +18,7 @@ function App() {
           </Link>
         </nav>
         <Outlet />
-      </header>
+      </section>
     </div>
   );
 }
