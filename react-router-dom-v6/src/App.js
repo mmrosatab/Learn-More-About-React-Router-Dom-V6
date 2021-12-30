@@ -5,21 +5,20 @@ import "./globalStyle.css";
 
 function App() {
   return (
-    <div>
-      <section>
-        <h1>React Router DOM V6</h1>
-        <nav className="navs-style">
-          <Link className="links-style" to="/invoices">
+    <section>
+      <header>
+        <nav>
+          <Link className="links" to="/invoices">
             Invoices
           </Link>
 
-          <Link className="links-style" to="/expenses">
+          <Link className="links" to="/expenses">
             Expenses
           </Link>
         </nav>
-        <Outlet />
-      </section>
-    </div>
+      </header>
+      <Outlet />
+    </section>
   );
 }
 

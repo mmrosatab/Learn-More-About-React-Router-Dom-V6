@@ -1,7 +1,47 @@
-.navs-style {
+.nav-invoices-expenses {
   display: flex;
 }
 
-.links-style {
+header nav {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.links {
+  padding: 1%;
+}
+
+.invoices-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.invoices {
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+  width: 40%;
+}
+
+.invoices-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.button {
+  margin: 1% 0% 1% 0% !important;
+}
+
+.invoice {
+  padding: 2%;
+}
+
+.expenses-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
   padding: 1%;
 }

@@ -1,7 +1,11 @@
+import Typography from "@mui/material/Typography";
+
 export default function Expenses() {
   return (
-    <main>
-      <h2>Expenses</h2>
-    </main>
+    <section className="expenses-container">
+      <Typography variant="h4" component="div">
+        Expenses
+      </Typography>
+    </section>
   );
 }

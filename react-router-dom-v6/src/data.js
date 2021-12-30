@@ -30,7 +30,7 @@ let invoices = [
     due: "01/27/2998",
   },
   {
-    name: "I need space",
+    name: "Frankenstein",
     number: 2022,
     amount: "$4,900",
     due: "01/27/2020",
