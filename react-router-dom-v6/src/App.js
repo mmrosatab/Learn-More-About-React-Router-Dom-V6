@@ -11,7 +11,6 @@ function App() {
           <Link className="links" to="/invoices">
             Invoices
           </Link>
-
           <Link className="links" to="/expenses">
             Expenses
           </Link>
