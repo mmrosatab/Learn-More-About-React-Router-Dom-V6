@@ -9,11 +9,10 @@ export default function Invoices() {
   let [inputValue, setInputValue] = useState("");
 
   function handleClick() {
-    if (inputValue) {
-      setSearchParams({ filter: inputValue });
-    } else {
-      setSearchParams({});
-    }
+    if (inputValue.length === 0) return true;
+    return inputValue.length > 0
+      ? setSearchParams({ filter: inputValue })
+      : setSearchParams({});
   }
 
   function handleChange(event) {
@@ -26,6 +25,13 @@ export default function Invoices() {
     }
   }
 
+  function searchInvoice(invoice) {
+    let filter = searchParams.get("filter");
+    if (!filter) return true;
+    let name = invoice.name.toLowerCase();
+    return name.startsWith(filter.toLowerCase());
+  }
+
   return (
     <>
       <section>
@@ -36,12 +42,7 @@ export default function Invoices() {
             onChange={(event) => handleChange(event)}
           />
           {invoices
-            .filter((invoice) => {
-              let filter = searchParams.get("filter");
-              if (!filter) return true;
-              let name = invoice.name.toLowerCase();
-              return name.startsWith(filter.toLowerCase());
-            })
+            .filter((invoice) => searchInvoice(invoice))
             .map((invoice) => (
               <NavLink
                 className="links-style"
@@ -52,9 +53,9 @@ export default function Invoices() {
               </NavLink>
             ))}
         </nav>
+        <button onClick={() => handleClick()}>Search</button>
         <Outlet />
       </section>
-      <button onClick={() => handleClick()}>Search</button>
     </>
   );
 }
