@@ -18,9 +18,10 @@ export default function Invoices() {
 
   function handleChange(event) {
     let value = event.target.value;
-    if (value) {
+    if (value.length > 0) {
       setInputValue(value);
     } else {
+      setInputValue("");
       setSearchParams({});
     }
   }
