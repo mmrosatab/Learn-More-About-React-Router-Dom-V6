@@ -3,6 +3,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import { getExpenses } from "../data";
+import Counter from "../components/counter";
 
 export default function Expenses() {
   const expenses = getExpenses();
@@ -19,6 +20,7 @@ export default function Expenses() {
             <ListItemText>
               {`Service: ${expense.service} - Price: ${expense.price}`}
             </ListItemText>
+            <Counter />
           </ListItem>
         ))}
       </List>
