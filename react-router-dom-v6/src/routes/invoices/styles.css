@@ -7,6 +7,7 @@
 .invoices {
   display: flex;
   flex-direction: column;
+  margin-top: 8%;
   padding: 1%;
   width: 40%;
 }
@@ -15,4 +16,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.button-search-invoices {
+  margin-top: 1% !important;
 }

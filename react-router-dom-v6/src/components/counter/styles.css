@@ -2,3 +2,8 @@
   width: 10%;
   margin-left: 2%;
 }
+
+.counter-container {
+  width: 5% !important;
+  background-color: red;
+}

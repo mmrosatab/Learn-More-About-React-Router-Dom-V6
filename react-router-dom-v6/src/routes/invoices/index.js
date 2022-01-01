@@ -49,7 +49,7 @@ export default function Invoices() {
           onChange={(event) => handleChange(event)}
         />
         <Button
-          className="button"
+          className="button-search-invoices"
           variant="contained"
           onClick={() => handleClick()}
         >
