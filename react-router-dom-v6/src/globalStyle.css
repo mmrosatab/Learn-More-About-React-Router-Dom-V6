@@ -49,5 +49,4 @@ header nav {
 .expenses {
   padding: 1%;
   display: flex;
-  flex-direction: column;
 }

@@ -1,27 +1,43 @@
-import { useState } from "react";
-import "./styles";
+import { useState, useEffect } from "react";
+import "./styles.css";
 
 export default function Counter() {
   let [amount, setAmount] = useState(0);
+
   function handleClickAdd() {
-    console.log(`Add: ${amount}`);
-    let value = amount++;
+    const value = amount + 1;
     setAmount(value);
-    console.log(`Add: ${amount}`);
   }
+
   function handleClickSub() {
-    console.log(`Sub: ${amount}`);
     if (amount > 0) {
-      let value = amount--;
+      const value = amount - 1;
       setAmount(value);
     }
   }
 
+  function handleChange(event) {
+    const value = parseInt(event.target.value);
+    if (value >= 0) {
+      setAmount(value);
+    }
+  }
+
+  useEffect(() => {}, [amount]);
+
   return (
     <div>
-      <div>{amount}</div>
-      <button onClick={handleClickSub}>-</button>
-      <button onClick={handleClickAdd}>+</button>
+      <input
+        className="counter-input"
+        value={amount}
+        onChange={(event) => handleChange(event)}
+      />
+      <button type="button" onClick={() => handleClickSub()}>
+        -
+      </button>
+      <button type="button" onClick={() => handleClickAdd()}>
+        +
+      </button>
     </div>
   );
 }
