@@ -1,6 +1,6 @@
 # Learn-More-About-React-Router-Dom-V6
 
-Learn more about React Router Dom V6
+The purpose this application is to learn more about React Router Dom V6 and it's features.
 
 # Learnings
 
@@ -8,12 +8,12 @@ Learn more about React Router Dom V6
 
 - [x] If the name of atribute and value for the same in an object javascript, you can use only one name. setState({filter: filter}) --> setState({filter}) :star:
 
-# How use this application?
+# How to use this application?
 
-## Install all dependencies
+> Install all dependencies
 
-### `yarn install`
+`yarn install`
 
-## Run application
+> Run application
 
-### `yarn start`
+`yarn start`
