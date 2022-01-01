@@ -6,7 +6,7 @@ let invoices = [
     due: "12/05/1995",
   },
   {
-    name: "Lexi Gray",
+    name: "Morpheus",
     number: 2000,
     amount: "$8,000",
     due: "10/31/2000",
@@ -18,19 +18,19 @@ let invoices = [
     due: "07/22/2003",
   },
   {
-    name: "Sarah Lance",
+    name: "Oracle",
     number: 1997,
     amount: "$14,000",
     due: "09/01/1997",
   },
   {
-    name: "Blink",
+    name: "Agent Smith",
     number: 1998,
     amount: "$4,600",
     due: "01/27/2998",
   },
   {
-    name: "Jubileu",
+    name: "Cypher",
     number: 2022,
     amount: "$4,900",
     due: "01/27/2020",
@@ -90,11 +90,3 @@ export function deleteInvoice(number) {
 export function getExpenses() {
   return expenses;
 }
-
-// export function getExpense(id) {
-//   return invoices.find((invoice) => invoice.number === number);
-// }
-
-// export function deleteInvoice(number) {
-//   invoices = invoices.filter((invoice) => invoice.number !== number);
-// }

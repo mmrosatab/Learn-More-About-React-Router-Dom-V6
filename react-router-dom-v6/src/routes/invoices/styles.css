@@ -1,0 +1,18 @@
+.invoices-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.invoices {
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+  width: 40%;
+}
+
+.invoices-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

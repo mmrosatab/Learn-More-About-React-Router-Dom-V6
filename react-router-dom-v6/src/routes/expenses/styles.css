@@ -1,0 +1,11 @@
+.expenses-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1%;
+}
+
+.expenses {
+  padding: 1%;
+  display: flex;
+}

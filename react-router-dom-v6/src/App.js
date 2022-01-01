@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import "normalize.css";
-import "./globalStyle.css";
+import "./styles.css";
 
 function App() {
   return (

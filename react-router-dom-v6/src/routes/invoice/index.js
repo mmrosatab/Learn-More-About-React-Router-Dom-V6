@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { getInvoice, deleteInvoice } from "../data";
+import { getInvoice, deleteInvoice } from "../../data";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 

@@ -1,6 +1,6 @@
 import { NavLink, Outlet, useSearchParams } from "react-router-dom";
-import "../globalStyle.css";
-import { getInvoices } from "../data";
+import "./styles.css";
+import { getInvoices } from "../../data";
 import { useState } from "react";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";

@@ -1,0 +1,9 @@
+header nav {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.links {
+  padding: 1%;
+}
