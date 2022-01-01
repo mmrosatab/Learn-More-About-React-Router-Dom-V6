@@ -5,4 +5,15 @@ Learn more about React Router Dom V6
 # Learnings
 
 - [x] setState is async function :star:
-- [x] If the name of atribute and value for the same in an object javascript, you can use only one name. setState({filter: filter}) --> setState({filter})
+
+- [x] If the name of atribute and value for the same in an object javascript, you can use only one name. setState({filter: filter}) --> setState({filter}) :star:
+
+# How use this application?
+
+## Install all dependencies
+
+### `yarn install`
+
+## Run application
+
+### `yarn start`
