@@ -10,7 +10,7 @@ The purpose this application is to learn more about React Router Dom V6 and it's
 
 ### How to use this application?
 
-- Install all dependencies
+Install all dependencies
 
 > `yarn install`
 
