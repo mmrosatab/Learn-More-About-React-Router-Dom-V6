@@ -26,7 +26,7 @@ export default function Counter() {
   useEffect(() => {}, [amount]);
 
   return (
-    <div>
+    <div className="counter-container">
       <input
         className="counter-input"
         value={amount}
