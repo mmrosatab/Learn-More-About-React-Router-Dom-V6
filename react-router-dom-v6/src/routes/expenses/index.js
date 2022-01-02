@@ -5,9 +5,14 @@ import ListItemText from "@mui/material/ListItemText";
 import { getExpenses } from "../../data";
 import Counter from "../../components/counter";
 import "./styles.css";
+import Button from "@mui/material/Button";
+import { useState } from "react";
 
 export default function Expenses() {
   const expenses = getExpenses();
+  let [totalValue, setTotalValue] = useState(0);
+
+  function handleClick() {}
 
   return (
     <section className="expenses-container">
@@ -25,6 +30,14 @@ export default function Expenses() {
           </ListItem>
         ))}
       </List>
+      <Button
+        className="button-calc"
+        variant="contained"
+        onClick={() => handleClick()}
+      >
+        Calculate
+      </Button>
+      <h2>Total: {totalValue}</h2>
     </section>
   );
 }

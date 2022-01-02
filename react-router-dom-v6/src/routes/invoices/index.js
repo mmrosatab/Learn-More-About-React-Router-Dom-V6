@@ -60,7 +60,7 @@ export default function Invoices() {
             .filter((invoice) => searchInvoice(invoice))
             .map((invoice) => (
               <NavLink
-                className="links"
+                className="links-invoices-nav"
                 to={`/invoices/${invoice.number}`}
                 key={invoice.number}
               >

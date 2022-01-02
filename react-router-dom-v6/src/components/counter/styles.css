@@ -4,6 +4,9 @@
 }
 
 .counter-container {
-  width: 5% !important;
-  background-color: red;
+  display: flex;
+}
+
+.counter-button {
+  width: 6%;
 }

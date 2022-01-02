@@ -4,6 +4,11 @@
   justify-content: center;
 }
 
-.links {
+.links-invoices-nav {
   padding: 1%;
+}
+.links-bar-container {
+  padding: 1%;
+  text-decoration: none;
+  color: white;
 }

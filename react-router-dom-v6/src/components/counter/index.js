@@ -26,18 +26,26 @@ export default function Counter() {
   useEffect(() => {}, [amount]);
 
   return (
-    <div className="counter-container">
+    <>
       <input
         className="counter-input"
         value={amount}
         onChange={(event) => handleChange(event)}
       />
-      <button type="button" onClick={() => handleClickSub()}>
+      <button
+        className="counter-button"
+        type="button"
+        onClick={() => handleClickSub()}
+      >
         -
       </button>
-      <button type="button" onClick={() => handleClickAdd()}>
+      <button
+        className="counter-button"
+        type="button"
+        onClick={() => handleClickAdd()}
+      >
         +
       </button>
-    </div>
+    </>
   );
 }
