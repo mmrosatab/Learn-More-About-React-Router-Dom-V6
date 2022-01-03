@@ -1,3 +1,9 @@
 export default function NotFound() {
-  return <h2>Page not found</h2>;
+  return (
+    <div className="not-found-container">
+      <div className="not-found">
+        <h2>Page not found</h2>
+      </div>
+    </div>
+  );
 }

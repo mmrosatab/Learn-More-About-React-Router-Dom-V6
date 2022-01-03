@@ -14,11 +14,7 @@ export default function Expenses() {
 
   function handleClick() {}
 
-  function getCounter(id, price, counter) {
-    console.log(`id: ${id}`);
-    console.log(`Counter: ${counter}`);
-    console.log(`Price: ${price}`);
-  }
+  function getCounter(id, price, counter) {}
 
   return (
     <section className="expenses-container">
