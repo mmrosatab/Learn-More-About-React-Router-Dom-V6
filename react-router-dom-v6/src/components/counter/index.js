@@ -1,35 +1,40 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./styles.css";
 
-export default function Counter() {
-  let [amount, setAmount] = useState(0);
+export default function Counter({ expenseId, price, getCounter }) {
+  const [counter, setCounter] = useState(0);
+  const firstUpdate = useRef(true);
 
   function handleClickAdd() {
-    const value = amount + 1;
-    setAmount(value);
+    setCounter(counter + 1);
   }
 
   function handleClickSub() {
-    if (amount > 0) {
-      const value = amount - 1;
-      setAmount(value);
+    if (counter > 0) {
+      setCounter(counter - 1);
     }
   }
 
   function handleChange(event) {
     const value = parseInt(event.target.value);
     if (value >= 0) {
-      setAmount(value);
+      setCounter(value);
     }
   }
 
-  useEffect(() => {}, [amount]);
+  useEffect(() => {
+    if (firstUpdate.current) {
+      firstUpdate.current = false;
+      return;
+    }
+    getCounter(expenseId, price, counter);
+  });
 
   return (
     <>
       <input
         className="counter-input"
-        value={amount}
+        value={counter}
         onChange={(event) => handleChange(event)}
       />
       <button

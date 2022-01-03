@@ -10,9 +10,15 @@ import { useState } from "react";
 
 export default function Expenses() {
   const expenses = getExpenses();
-  let [totalValue, setTotalValue] = useState(0);
+  const [expenseCart, setExpenseCart] = useState([]);
 
   function handleClick() {}
+
+  function getCounter(id, price, counter) {
+    console.log(`id: ${id}`);
+    console.log(`Counter: ${counter}`);
+    console.log(`Price: ${price}`);
+  }
 
   return (
     <section className="expenses-container">
@@ -26,7 +32,11 @@ export default function Expenses() {
             <ListItemText>
               {`Service: ${expense.service} - Price: ${expense.price}`}
             </ListItemText>
-            <Counter />
+            <Counter
+              expenseId={expense.id}
+              price={expense.price}
+              getCounter={getCounter}
+            />
           </ListItem>
         ))}
       </List>
@@ -37,7 +47,7 @@ export default function Expenses() {
       >
         Calculate
       </Button>
-      <h2>Total: {totalValue}</h2>
+      <h2>Total: {}</h2>
     </section>
   );
 }
